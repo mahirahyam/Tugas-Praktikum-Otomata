@@ -75,3 +75,28 @@ State akhir berada di A, bukan di B, sehingga string tersebut ditolak (Rejected)
 
 ## Visualisasi Hasil FSM
 ![image](Digraph.gv.png)
+
+## Penjelasan Visualisasi FSM
+Berdasarkan alur panah merah (path) yang merepresentasikan input string, misalnya "110". Proses ini berjalan dari kiri ke kanan, mengikuti setiap simbol dalam string dan berpindah state sesuai aturan transisi.
+Pada awalnya, berada di state S (start). Ini adalah titik mulai sebelum membaca input apa pun. Ketika simbol pertama dibaca, FSM langsung berpindah sesuai aturan yang ada.
+
+Langkah-langkah:
+- Langkah 1 (input = 1)
+Dari state S, ketika membaca angka 1, mesin berpindah ke state B. Ini terlihat dari panah merah dari S ke B dengan label 1. State B adalah state penerima, sehingga sejauh ini string masih valid.
+- Langkah 2 (input = 1)
+Dari state B, saat membaca angka 1 lagi, mesin tetap berada di state B (loop). Ini menunjukkan bahwa jika terus membaca angka 1, FSM tetap dalam kondisi aman. Pada gambar, ini ditunjukkan dengan panah melingkar di B yang diberi nomor langkah berikutnya.
+- Langkah 3 (input = 0)
+Dari state B, ketika membaca angka 0, mesin berpindah ke state A. Ini terlihat dari panah merah dari B ke A. State A bukan state penerima, sehingga posisi akhir ini menentukan hasil.
+
+Setelah seluruh input selesai dibaca, FSM berhenti di state A. Karena state akhir bukan B (accept state), maka string dinyatakan Rejected.
+
+- Jika dari state A membaca 0 lagi, maka akan masuk ke state C (trap state), yang berarti string mengandung substring "00" dan langsung tidak valid.
+- State C memiliki loop untuk 0 dan 1, artinya jika sudah masuk ke sini, tidak bisa kembali ke kondisi valid.
+- State B hanya bisa dicapai jika karakter terakhir adalah 1, sehingga memenuhi syarat akhir string.
+
+## Analisis Komponen
+1. Dari sisi kebenaran algoritma dan output, program yang dibuat sudah sesuai dengan konsep Deterministic Finite Automaton (DFA). Transisi antar state telah dirancang dengan benar untuk memenuhi aturan bahasa L, yaitu string harus berakhir dengan 1 dan tidak boleh mengandung substring “00”. Hal ini terlihat dari adanya state C sebagai trap state yang akan menangkap semua kondisi yang melanggar aturan tersebut. Selain itu, hasil output seperti “Accepted” atau “Rejected” ditentukan berdasarkan state akhir (B sebagai accept state), sehingga secara logika sudah tepat dan konsisten dengan teori automata.
+
+2. Dari sisi fitur yang memudahkan pengguna dan fleksibilitas program, program ini sudah memiliki keunggulan dibanding implementasi dasar. Penggunaan library Graphviz memungkinkan visualisasi FSM dalam bentuk diagram, sehingga pengguna tidak hanya melihat hasil akhir, tetapi juga memahami alur perpindahan state melalui jalur berwarna merah. Output yang ditampilkan juga informatif karena mencakup input, path, dan hasil. Namun, fleksibilitasnya masih bisa ditingkatkan, misalnya dengan menambahkan loop input agar pengguna dapat mencoba beberapa string sekaligus, atau menyimpan hasil visualisasi ke file agar bisa digunakan dalam laporan.
+
+3. Dari sisi orisinalitas (tidak terindikasi plagiarisme), program ini menunjukkan ciri pengembangan sendiri. Hal ini terlihat dari adanya kombinasi antara logika FSM, validasi input, serta visualisasi graf yang tidak hanya standar tetapi juga menambahkan fitur highlight path. Struktur kode yang modular (dipisah menjadi class FSM, fungsi visualisasi, dan fungsi utama) juga menunjukkan pemahaman konsep, bukan sekadar menyalin. Selain itu, penggunaan fitur tambahan seperti penomoran langkah pada jalur merah menjadi nilai tambah yang memperkuat keunikan implementasi.
