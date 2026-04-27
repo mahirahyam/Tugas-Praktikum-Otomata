@@ -1,7 +1,6 @@
 # Penjelasan Kode Jawaban Praktikum 1
 
 ## Soal
-https://github.com/mahirahyam/Tugas-Praktikum-Otomata/blob/main/Praktikum%201/praktikum-1-otomata.png
 Buatlah program computer yang dapat membaca inputan berupa program computer lain, dan dapat menghasilkan output berupa token-token (string-string yang terbaca) dan mengelompokkannya sesuai dengan sifat string tersebut:
 - Reserve words
 - Simbol dan tanda baca
