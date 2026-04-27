@@ -1,8 +1,7 @@
 # Penjelasan Kode Jawaban Praktikum 2
 
 ## Soal
-Buatlah program komputer untuk mengotomasi Finite State Machine (FSM) yang dapat menentukan apakah sebuah string termasuk dalam bahasa:
-L = { x ∈ (0 + 1)⁺ | karakter terakhir adalah 1 dan tidak mengandung substring 00 }. Program juga harus memiliki user interface sederhana agar pengguna mudah menginput string.
+![image](praktikum-2-otomata.png)
 
 ## Jawaban & Penjelasan
 Program ini bertujuan untuk mensimulasikan sebuah FSM yang membaca string biner (0 dan 1), kemudian menentukan apakah string tersebut diterima atau tidak berdasarkan aturan bahasa yang diberikan. Selain itu, program juga dilengkapi dengan visualisasi graf menggunakan library graphviz sehingga pengguna dapat melihat alur perpindahan state secara langsung.
@@ -75,4 +74,4 @@ B → A (input 0)
 State akhir berada di A, bukan di B, sehingga string tersebut ditolak (Rejected). Selain itu, karena tidak berakhir dengan 1, maka tidak memenuhi syarat bahasa.
 
 ## Visualisasi Hasil FSM
-![image](praktikum-2-otomata.png)
+![image](Digraph.gv.png)
