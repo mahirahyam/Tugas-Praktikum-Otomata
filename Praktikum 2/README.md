@@ -11,7 +11,7 @@ from graphviz import Digraph
 ```
 Library graphviz digunakan untuk visualisasi FSM dalam bentuk graf (diagram state). Ini adalah bagian penting dari UI karena pengguna tidak hanya melihat hasil, tapi juga alur perpindahan state (path).
 
-## Inisialisasi FSM
+## 1. Inisialisasi FSM
 
 Pada bagian awal, program mendefinisikan kelas FSM Machine yang berisi struktur dasar FSM. Di dalamnya ditentukan state awal (S) dan state akhir (B) sebagai state penerima. FSM ini bekerja dengan konsep bahwa string hanya akan diterima jika: Tidak mengandung substring "00" dan Karakter terakhir adalah 1. Transisi antar state didefinisikan dalam bentuk dictionary. Setiap state memiliki aturan perpindahan berdasarkan input 0 atau 1. Misalnya, dari state S jika menerima input 0 akan berpindah ke A, sedangkan jika menerima 1 akan berpindah ke B.
 
@@ -24,7 +24,7 @@ Struktur state:
 
 State C disebut trap state karena jika sudah masuk ke state ini, semua input berikutnya akan tetap berada di C dan otomatis ditolak.
 
-##2. Proses Pengecekan String
+## 2. Proses Pengecekan String
 
 Fungsi `check_string` digunakan untuk membaca input dari pengguna. Proses ini dilakukan dengan cara menyisir string karakter demi karakter. Setiap karakter akan:
 - Dicek validitasnya (harus 0 atau 1)
@@ -37,7 +37,7 @@ Setelah seluruh string diproses, program akan mengecek:
 Jika state terakhir adalah B → string diterima (Accepted)
 Jika bukan → string ditolak (Rejected)
 
-##3. Visualisasi FSM (User Interface)
+## 3. Visualisasi FSM (User Interface)
 
 Program ini memiliki keunggulan pada bagian visualisasi menggunakan graphviz. Fungsi `draw_fsm` digunakan untuk menggambar diagram FSM dalam bentuk graf. Beberapa fitur visual yang digunakan:
 - Arah graf dibuat dari kiri ke kanan agar mudah dibaca
@@ -52,7 +52,7 @@ Yang paling penting adalah fitur highlight jalur input:
 
 Dengan ini, pengguna tidak hanya melihat hasil, tetapi juga memahami bagaimana FSM bekerja secara visual.
 
-##4. Fungsi Utama (Interface Program)
+## 4. Fungsi Utama (Interface Program)
 Fungsi `run_fsm` bertindak sebagai penghubung antara pengguna dan sistem FSM. Fungsi ini:
 - Menerima input string
 - Memanggil fungsi pengecekan FSM
@@ -63,7 +63,7 @@ Fungsi `run_fsm` bertindak sebagai penghubung antara pengguna dan sistem FSM. Fu
 
 Setelah itu, program akan menampilkan diagram FSM secara otomatis menggunakan Graphviz.
 
-##5. Test Case
+## 5. Test Case
 Misalnya input yang diberikan adalah "110".
 
 Proses yang terjadi:
@@ -74,5 +74,5 @@ B → A (input 0)
 
 State akhir berada di A, bukan di B, sehingga string tersebut ditolak (Rejected). Selain itu, karena tidak berakhir dengan 1, maka tidak memenuhi syarat bahasa.
 
-##Visualisasi Hasil FSM
+## Visualisasi Hasil FSM
 
