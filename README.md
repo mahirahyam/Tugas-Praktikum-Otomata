@@ -15,6 +15,7 @@ Hasil Jawaban Tugas Praktikum 1 dan 2 Mata Kuliah Otomata oleh Kelompok 12
   - [Source Code](https://github.com/mahirahyam/Tugas-Praktikum-Otomata/blob/main/Praktikum%201/main.py)
   - [Analisis](https://github.com/mahirahyam/Tugas-Praktikum-Otomata/blob/main/Praktikum%201/README.md)
 - [Praktikum 2](#praktikum-2)
-  - [Soal Praktikum 2](#soal-praktikum-2) 
+  - [Soal Praktikum 2](#soal-praktikum-2)
+  - [Source Code](https://github.com/mahirahyam/Tugas-Praktikum-Otomata/blob/main/Praktikum%202/Praktikum_2_Otomata.ipynb) 
   - [Analisis](#analisis)
 
