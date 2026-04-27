@@ -75,4 +75,4 @@ B → A (input 0)
 State akhir berada di A, bukan di B, sehingga string tersebut ditolak (Rejected). Selain itu, karena tidak berakhir dengan 1, maka tidak memenuhi syarat bahasa.
 
 ## Visualisasi Hasil FSM
-https://github.com/mahirahyam/Tugas-Praktikum-Otomata/blob/main/Praktikum%202/Digraph.gv.png
+![image](praktikum-2-otomata.png)
